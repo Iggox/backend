@@ -7,11 +7,9 @@ app.set("port", process.env.PORT || 8181);
 //el process.env.PORT es para que al subirlo a un host (desplegarlo) se configure automaticamente
 //al usar el puerto 8080 la terminal me indicaba que ya estaba en uso, por tanto opté por el 8181 por ejemplo
 
-app.listen(app.get("port"), leerPuerto());
-
-function leerPuerto() {
+app.listen(app.get("port"), () => {
   console.log("hola desde el puerto " + app.get("port"));
-}
+});
 
 //Routes
 app.use(require("./routes/index"));
