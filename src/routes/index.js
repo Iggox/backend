@@ -43,12 +43,9 @@ router.get("/rutaGetConJSON", (req, res) => {
   });
 });
 
-/* dejo esto preparado para probar cosas a futuro
-router.get("/rutaGetPrueba", (req, res) => {
-    //__dirname es una variable que tiene como valor la carpeta en la que estamos ubicados
-  console.log("Aviso: alguien a accecido a la rutaGetPrueba.");
-  res.send(__dirname);
+router.post("/rutaPost", (req, res) => {
+  console.log("Enviada una petición POST");
+  res.send("Hola, soy la 1era ruta POST");
 });
-*/
 
 module.exports = router;
