@@ -74,7 +74,15 @@ router.post("/rutaPostConJson", (req, res) => {
 router.post("/rutaPostConBody", (req, res) => {
   console.log("Enviada una petición POST");
   console.log(req.body);
-  res.send("Se han recibido todos los datos.");
+  res.json({
+    nombre: req.body.nombre,
+    apellidos: req.body.apellidos,
+    email: req.body.email,
+    sexo: req.body.sexo,
+    nacimiento: req.body.nacimiento,
+  });
+  //res.send("Se han recibido todos los datos introducidos.");
+  //res.redirect("http://127.0.0.1:5500/Frontend/index.html");
 });
 
 //probando con el módulo "test" importado
