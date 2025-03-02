@@ -71,11 +71,10 @@ router.post("/rutaPostConJson", (req, res) => {
   });
 });
 
-router.post("/rutaPostHola", (req, res) => {
-  req.body = "Hola desde el body en un POST";
+router.post("/rutaPostConBody", (req, res) => {
   console.log("Enviada una petición POST");
   console.log(req.body);
-  res.send("Poco a poco");
+  res.send("Se han recibido todos los datos.");
 });
 
 //probando con el módulo "test" importado
@@ -84,6 +83,8 @@ router.post("/rutaPostTest", (req, res) => {
   console.log("Enviada una petición POST");
   console.log(req.body);
   res.send(test.objeto1);
+  // res.send(test.clase);
+  //
 });
 
 module.exports = router;

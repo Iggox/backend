@@ -15,6 +15,7 @@ app.set("port", process.env.PORT || 8181);
 app.use(morgan("dev"));
 //dependiendo del formato que usemos dentro de morgan("") nos mostrará más o menos información relacionada a la petición del server
 //common por ejemplo muestra la fecha y hora de la petición, cosa que dev no hace
+app.use(express.urlencoded({ extended: false }));
 
 app.listen(app.get("port"), () => {
   console.log("hola desde el puerto " + app.get("port"));
