@@ -82,7 +82,7 @@ router.post("/rutaPostConBody", (req, res) => {
     nacimiento: req.body.nacimiento,
   });*/
   //res.send("Se han recibido todos los datos introducidos.");
-  res.redirect("http://127.0.0.1:5500/Frontend/index.html");
+  res.redirect("https://holamundo-backendnode.onrender.com/rutaPostConBody");
 });
 
 //probando con el módulo "test" importado
