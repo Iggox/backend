@@ -44,6 +44,20 @@ router.get("/rutaGetConJSON", (req, res) => {
   });
 });
 
+router.get("/rutaGetConBody", (req, res) => {
+  console.log("Enviada una petición GET");
+  console.log(req.body);
+  /*res.json({
+    nombre: req.body.nombre,
+    apellidos: req.body.apellidos,
+    email: req.body.email,
+    sexo: req.body.sexo,
+    nacimiento: req.body.nacimiento,
+  });*/
+  //res.send("Se han recibido todos los datos introducidos.");
+  res.redirect("https://holamundo-backendnode.onrender.com/rutaGetConBody");
+});
+
 //Rutas POST
 //Son distintas a las rutas get ya que estas traen consigo datos del usuario, normalmente provenientes de formularios
 router.post("/rutaPost", (req, res) => {
