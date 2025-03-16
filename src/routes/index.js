@@ -55,7 +55,7 @@ router.get("/rutaGetConBody", (req, res) => {
     nacimiento: req.body.nacimiento,
   });*/
   //res.send("Se han recibido todos los datos introducidos.");
-  res.redirect("https://holamundo-backendnode.onrender.com/index.html");
+  res.redirect("https://iggox.github.io/web_Frontend/");
 });
 
 //Rutas POST
@@ -96,7 +96,7 @@ router.post("/rutaPostConBody", (req, res) => {
     nacimiento: req.body.nacimiento,
   });*/
   //res.send("Se han recibido todos los datos introducidos.");
-  res.redirect("https://holamundo-backendnode.onrender.com/index.html");
+  res.redirect("https://iggox.github.io/web_Frontend/");
 });
 
 //probando con el módulo "test" importado
