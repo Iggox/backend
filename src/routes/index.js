@@ -5,9 +5,7 @@ let test = require("./../test");
 //Raiz
 router.get("/", (req, res) => {
   console.log("Aviso: alguien a accecido al servidor.");
-  res.send(
-    "¡Bienvenid@! Has accedido al servidor en desarrollo. Puedes ver las rutas disponibles en /rutas"
-  );
+ res.redirect("https://iggox.github.io/web_Frontend/");
 });
 
 router.get("/rutas", (req, res) => {
