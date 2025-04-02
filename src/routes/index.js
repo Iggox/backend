@@ -29,16 +29,7 @@ router.get("/rutaGetConJSON", (req, res) => {
   console.log("Aviso: alguien a accecido a rutaGetConJSON.");
   res.json({
     Title: "Hola, has accedido a la rutaGetConJSON",
-    Párrafos: {
-      Párrafo: [
-        {
-          Contenido:
-            "Probando a establecer un JSON desde el mismo archivo routes.",
-        },
-        { Contenido: "Probablemente haya una forma más fácil de hacer esto." },
-        { Contenido: "Por el momento sólo son pruebas." },
-      ],
-    },
+    Contenido: "Probando a establecer un JSON desde el mismo archivo routes.",
   });
 });
 
@@ -72,14 +63,7 @@ router.post("/rutaPostConJson", (req, res) => {
   console.log("Enviada una petición POST con JSON");
   res.json({
     Title: "Hola, has accedido a la rutaPostConJSON",
-    Párrafos: {
-      Párrafo: [
-        {
-          Contenido: "Estableciendo un JSON desde una ruta POST.",
-        },
-        { Contenido: "lorem ipsum etc etc etc" },
-      ],
-    },
+    Contenido: "Estableciendo un JSON desde una ruta POST.",
   });
 });
 
