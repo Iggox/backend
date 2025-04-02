@@ -106,7 +106,7 @@ router.post("/rutaPostConBody2", (req, res) => {
   });
   */
   //res.send("Se han recibido todos los datos introducidos.");
-  res.body();
+  res.send(req.body);
 });
 
 //probando con el módulo "test" importado
