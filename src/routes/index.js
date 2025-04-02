@@ -100,9 +100,11 @@ router.post("/rutaPostConBody", (req, res) => {
 router.post("/rutaPostConBody2", (req, res) => {
   console.log("Enviada una petición POST");
   console.log(req.body);
+  /* funcionar funciona, si le doy el mismo nombre que el json que genero, me lo devuelve tal cual, pero el server tira error de algo
   res.json({
     nombre: req.body.nombre,
   });
+  */
   res.send("Se han recibido todos los datos introducidos.");
 });
 
