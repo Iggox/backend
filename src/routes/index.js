@@ -5,7 +5,7 @@ let test = require("./../test");
 //Raiz
 router.get("/", (req, res) => {
   console.log("Aviso: alguien a accecido al servidor.");
- res.redirect("https://iggox.github.io/web_Frontend/");
+  res.redirect("https://iggox.github.io/web_Frontend/");
 });
 
 router.get("/rutas", (req, res) => {
@@ -100,6 +100,9 @@ router.post("/rutaPostConBody", (req, res) => {
 router.post("/rutaPostConBody2", (req, res) => {
   console.log("Enviada una petición POST");
   console.log(req.body);
+  res.json({
+    nombre: req.body.nombre,
+  });
   res.send("Se han recibido todos los datos introducidos.");
 });
 
