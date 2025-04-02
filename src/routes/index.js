@@ -97,6 +97,12 @@ router.post("/rutaPostConBody", (req, res) => {
   res.redirect("https://iggox.github.io/web_Frontend/");
 });
 
+router.post("/rutaPostConBody2", (req, res) => {
+  console.log("Enviada una petición POST");
+  console.log(req.body);
+  res.send("Se han recibido todos los datos introducidos.");
+});
+
 //probando con el módulo "test" importado
 router.post("/rutaPostTest", (req, res) => {
   req.body = test.objeto1;
