@@ -61,6 +61,7 @@ router.post("/rutaPost2", (req, res) => {
 
 router.post("/rutaPostConJson", (req, res) => {
   console.log("Enviada una petición POST con JSON");
+  console.log(req.body);
   res.json({
     Title: "Hola, has accedido a la rutaPostConJSON",
     Contenido: "Estableciendo un JSON desde una ruta POST.",
