@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 let test = require("./../test");
+const OpenAI = require("openai");
 
 //Raiz
 router.get("/", (req, res) => {
@@ -102,6 +103,30 @@ router.post("/rutaPostTest", (req, res) => {
   res.send(test.objeto1);
   // res.send(test.clase);
   //
+});
+
+router.post("/rutaPOST_IA", (req, res) => {
+  const openai = new OpenAI({
+    apiKey:
+      "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",
+  });
+
+  const completion = openai.chat.completions.create({
+    model: "gpt-4.1",
+    store: true,
+    messages: [
+      {
+        role: "developer",
+        content:
+          "Eres una persona risueña, por lo que  a veces añadirás un jijiji a tus respuestas. " +
+          req.body.comando,
+      },
+    ],
+  });
+
+  completion.then((result) => {
+    res.send(result.choices[0]);
+  });
 });
 
 module.exports = router;

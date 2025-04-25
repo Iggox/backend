@@ -4,6 +4,7 @@ const app = express();
 //importamos los módulos de express y creamos una constante para guardar en ella los módulos los constructores y demás
 const morgan = require("morgan");
 //módulo que nos facilita el testeo ya que devuelve varios datos: el tipo de petición, tiempo de respuesta, la ruta, el estado mediante códigos como 200, 404,  etc
+const cors = require("cors");
 
 //Configuración
 app.set("port", process.env.PORT || 8181);
@@ -16,6 +17,7 @@ app.use(morgan("dev"));
 //dependiendo del formato que usemos dentro de morgan("") nos mostrará más o menos información relacionada a la petición del server
 //common por ejemplo muestra la fecha y hora de la petición, cosa que dev no hace
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.listen(app.get("port"), () => {
   console.log("hola desde el puerto " + app.get("port"));
