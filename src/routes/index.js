@@ -108,7 +108,7 @@ router.post("/rutaPostTest", (req, res) => {
 router.post("/rutaPOST_IA", (req, res) => {
   const openai = new OpenAI({
     apiKey:
-      "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",
+      "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",
   });
 
   const completion = openai.chat.completions.create({
