@@ -107,19 +107,18 @@ router.post("/rutaPostTest", (req, res) => {
 
 router.post("/rutaPOST_IA", (req, res) => {
   const openai = new OpenAI({
-    apiKey:
-      "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",
+    apiKey: "introducir apiKey",
   });
 
   const completion = openai.chat.completions.create({
-    model: "gpt-4.1",
+    model: "gpt-4o-mini",
     store: true,
     messages: [
       {
         role: "developer",
         content:
-          "Eres una persona risueña, por lo que  a veces añadirás un jijiji a tus respuestas. " +
-          req.body.comando,
+          "Eres una persona risueña, por lo que  a veces añadirás un jijiji a tus respuestas. Dime el día de hoy" +
+          req.body.pregunta,
       },
     ],
   });
